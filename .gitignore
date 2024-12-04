@@ -1,6 +1,7 @@
 .DS_Store
 .env
 .yarnrc.yml
+package-lock.json
 yarn.lock
 
 .idea/
@@ -8,4 +9,3 @@ yarn.lock
 .vscode/
 
 node_modules/
-
