@@ -1,0 +1,11 @@
+.DS_Store
+.env
+.yarnrc.yml
+yarn.lock
+
+.idea/
+.yarn/
+.vscode/
+
+node_modules/
+
