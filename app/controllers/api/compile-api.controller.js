@@ -11,8 +11,13 @@ const
 
 const compileApiController = {
     postAction: async (ctx, next, action) => {
-        console.log(process.pid, ctx.params);
-        // console.log(ctx.request.body);
+        if (Array.isArray(ctx.request.body.tss))
+            ctx.request.body.tss = ctx.request.body.tss.join(' ')
+        ;
+
+        if (!ctx.request.body.html)
+            ctx.request.body.html = '<html><body></body></html>';
+        ;
 
         try {
             jTormLanguageModel.setLanguage(ctx.params.language);
@@ -23,7 +28,7 @@ const compileApiController = {
             const doc = await jTormHandler.handle(null, null, null, 1, v);
 
             const v2 = await jTormViewModel.create(doc, null, ctx.request.body.data, 0);
-            await jTormEventModel.handle(doc, 'after', 'view');
+            await jTormEventModel.handle(v2, 'after', 'view');
 
             ctx.status = 200;
 
