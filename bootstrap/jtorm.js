@@ -101,6 +101,7 @@ const
 jTormCssPlugin.cssMethod = jTormCssMethod;
 jTormCssPlugin.uiMethod = jTormUiMethod;
 jTormCssMethod.cssPlugin = jTormCssPlugin;
+jTormJsPlugin.jsMethod = jTormJsMethod;
 jTormJsPlugin.uiMethod = jTormUiMethod;
 jTormJsMethod.jsPlugin = jTormJsPlugin;
 
