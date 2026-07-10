@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=dev yarn nodemon ./bin/jtorm-static.js",
+    "test": "node --test \"test/**/*.test.js\"",
     "start": "NODE_ENV=production node ./node_modules/pm2/bin/pm2 start ./bin/jtorm-static.js",
     "stop": "node ./node_modules/pm2/bin/pm2 stop all",
     "restart": "node ./node_modules/pm2/bin/pm2 restart all"
@@ -56,6 +57,7 @@
     "@koa/router": "^13.1.0",
     "axios": "^1.7.7",
     "better-module-alias": "^1.2.1",
+    "dompurify": "^3.4.11",
     "dotenv": "^16.4.5",
     "html-minifier": "^4.0.0",
     "jsdom": "^25.0.1",
